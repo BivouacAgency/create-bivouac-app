@@ -1,0 +1,17 @@
+import React from 'react';
+import { GetStaticProps, NextPage } from "next";
+import {{ pascalCase name }}PageComponent from "{{pageComponentRelativePath path (pascalCase name)}}"
+
+export interface I{{ pascalCase name }}PageProps {}
+
+const {{ pascalCase name }}Page: NextPage<I{{ pascalCase name }}PageProps> = (props) => {
+  return <{{ pascalCase name }}PageComponent {...props}/>;
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {},
+  };
+};
+
+export default {{ pascalCase name }}Page;

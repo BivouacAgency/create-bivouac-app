@@ -1,3 +1,9 @@
+# ⛺ Bivouac Starter 🚀
+
+This project is a fork of [create-t3-app](https://github.com/t3-oss/create-t3-app). It contains some more tools used by the [Bivouac Team](https://bivouac.io).
+
+## Original README file
+
 <p align="center">
   <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/t3-oss/create-t3-app/99286f37324330ecdf75132fae1f246440a88035/www/public/images/t3-light.svg">
