@@ -1,5 +1,75 @@
 # Changelog
 
+## 7.28.0
+
+### Minor Changes
+
+- [#1777](https://github.com/t3-oss/create-t3-app/pull/1777) [`640a0e0`](https://github.com/t3-oss/create-t3-app/commit/640a0e086d1515f4f88315d3295b44296fe7bbd0) Thanks [@limegorilla](https://github.com/limegorilla)! - Warning about planetscale's serverless driver now only shown if using mySQL
+
+### Patch Changes
+
+- [#1778](https://github.com/t3-oss/create-t3-app/pull/1778) [`01badfb`](https://github.com/t3-oss/create-t3-app/commit/01badfb38caec5d0d211d7f93c6e288d55f2a751) Thanks [@DerTimonius](https://github.com/DerTimonius)! - fix: add missing default font in pagesDir
+
+- [#1766](https://github.com/t3-oss/create-t3-app/pull/1766) [`d7695df`](https://github.com/t3-oss/create-t3-app/commit/d7695df89a77ea5add1d703b63b9aeda5b5ef0c5) Thanks [@fuegoio](https://github.com/fuegoio)! - fix: cache database connection during development to prevent `Too many connections` due to HMR
+
+## 7.27.0
+
+### Minor Changes
+
+- [#1773](https://github.com/t3-oss/create-t3-app/pull/1773) [`8f29eb9`](https://github.com/t3-oss/create-t3-app/commit/8f29eb990ccbc36c018ce596d2de0205b3c7edac) Thanks [@juliusmarminge](https://github.com/juliusmarminge)! - feat(prisma): support correct typings when using `.extends()`
+
+### Patch Changes
+
+- [#1774](https://github.com/t3-oss/create-t3-app/pull/1774) [`0418663`](https://github.com/t3-oss/create-t3-app/commit/0418663ec6cc370ed1e067f1ef68f0d5ca41af53) Thanks [@juliusmarminge](https://github.com/juliusmarminge)! - chore: update drizzle-orm
+
+- [#1763](https://github.com/t3-oss/create-t3-app/pull/1763) [`836fccf`](https://github.com/t3-oss/create-t3-app/commit/836fccf22dc224e283a764649c16090e4ba42b18) Thanks [@skullface](https://github.com/skullface)! - fix: correct casing of “PlanetScale”
+
+- [#1764](https://github.com/t3-oss/create-t3-app/pull/1764) [`79e361c`](https://github.com/t3-oss/create-t3-app/commit/79e361cfd8ad0740a353c7712cad8d38cbc8ee7b) Thanks [@vlxm](https://github.com/vlxm)! - fix: fix password substitution in start-database scripts
+
+- [#1769](https://github.com/t3-oss/create-t3-app/pull/1769) [`c944c49`](https://github.com/t3-oss/create-t3-app/commit/c944c490522a3fb921d564ab55eecd8c535142c3) Thanks [@jhamill34](https://github.com/jhamill34)! - fix: generated comments in env file
+
+- [#1772](https://github.com/t3-oss/create-t3-app/pull/1772) [`c3c4710`](https://github.com/t3-oss/create-t3-app/commit/c3c4710b2e7e6245c0afae45e1a5119d91cb9578) Thanks [@mladenovic-13](https://github.com/mladenovic-13)! - fix: use singleton pattern for client-side QueryClient to support `useSuspenseQuery` when there is no parent `<Suspense>`-element
+
+- [#1748](https://github.com/t3-oss/create-t3-app/pull/1748) [`17c2a5e`](https://github.com/t3-oss/create-t3-app/commit/17c2a5eb52a7faff7ea9e1d1a6270c2216235ff2) Thanks [@aaronmallen](https://github.com/aaronmallen)! - add missing `pg` dev dependency when using postgres drizzle option, required for `drizzle-studio`
+
+## 7.26.0
+
+### Minor Changes
+
+- [#1622](https://github.com/t3-oss/create-t3-app/pull/1622) [`06b1bca`](https://github.com/t3-oss/create-t3-app/commit/06b1bcafe8751a0fc3cfb7992dfb12cb88bf0234) Thanks [@ronanru](https://github.com/ronanru)! - add more db options
+
+## 7.25.2
+
+### Patch Changes
+
+- [#1723](https://github.com/t3-oss/create-t3-app/pull/1723) [`c116281`](https://github.com/t3-oss/create-t3-app/commit/c116281f3626ae5f05191037789d7338a8fa2e5c) Thanks [@juliusmarminge](https://github.com/juliusmarminge)! - fix: don't pass cookies to CC
+
+- [#1728](https://github.com/t3-oss/create-t3-app/pull/1728) [`06ec5b3`](https://github.com/t3-oss/create-t3-app/commit/06ec5b37784c305d18a775b64d34cecb5de45bf2) Thanks [@Nsttt](https://github.com/Nsttt)! - fix missuse of binary expressions
+
+## 7.25.1
+
+### Patch Changes
+
+- [#1713](https://github.com/t3-oss/create-t3-app/pull/1713) [`e34b082`](https://github.com/t3-oss/create-t3-app/commit/e34b08245cc3c1288f90b289577e7c18b37acb1c) Thanks [@daikiejp](https://github.com/daikiejp)! - remove unused @types/inquirer
+
+- [#1703](https://github.com/t3-oss/create-t3-app/pull/1703) [`b6ccded`](https://github.com/t3-oss/create-t3-app/commit/b6ccdedd11b22b64e7bb6f1c55997362fa2915a4) Thanks [@c-ehrlich](https://github.com/c-ehrlich)! - update eslint setup for next 14.0.4
+
+- [#1714](https://github.com/t3-oss/create-t3-app/pull/1714) [`ba352ef`](https://github.com/t3-oss/create-t3-app/commit/ba352ef73823eb6413cf251bd7111db6fcb3a585) Thanks [@juliusmarminge](https://github.com/juliusmarminge)! - chore: update drizzle dep to remove invalid expo peerDep
+
+- [#1707](https://github.com/t3-oss/create-t3-app/pull/1707) [`26efe48`](https://github.com/t3-oss/create-t3-app/commit/26efe482bdcb309796a2bf207c50ebc844233106) Thanks [@esize](https://github.com/esize)! - chore: update drizzle-orm and drizzle-kit
+
+- [#1708](https://github.com/t3-oss/create-t3-app/pull/1708) [`8f379b4`](https://github.com/t3-oss/create-t3-app/commit/8f379b4df75e56b98973aabcc2097b62be80d0c7) Thanks [@KATT](https://github.com/KATT)! - chore: drop `t.middleware()`
+
+## 7.25.0
+
+### Minor Changes
+
+- [#1702](https://github.com/t3-oss/create-t3-app/pull/1702) [`62fa8dc`](https://github.com/t3-oss/create-t3-app/commit/62fa8dcad2e0d3d6bad04bb6167d7580a754049c) Thanks [@c-ehrlich](https://github.com/c-ehrlich)! - update drizzle-kit and change connectionString to uri
+
+### Patch Changes
+
+- [#1690](https://github.com/t3-oss/create-t3-app/pull/1690) [`6efb99a`](https://github.com/t3-oss/create-t3-app/commit/6efb99a94f29d28243fa7c625b099995e84e4db2) Thanks [@c-ehrlich](https://github.com/c-ehrlich)! - fix typo in env.mjs
+
 ## 7.24.2
 
 ### Patch Changes

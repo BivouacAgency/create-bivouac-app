@@ -147,7 +147,7 @@ You'll notice we use `superjson` as [data transformer](https://trpc.io/docs/v10/
 
 ### 📄 `server/api/routers/*.ts`
 
-This is where you define the routes and procedures of your API. By convention, you [create separate routers](https://trpc.io/docs/v10/router) for related procedures.
+This is where you define the routes and procedures of your API. By convention, you [create separate routers](https://trpc.io/docs/v10/server/routers) for related procedures.
 
 ### 📄 `server/api/root.ts`
 
@@ -177,24 +177,24 @@ If you want to expose a single procedure externally, you're looking for [server 
 
 ```ts:pages/api/users/[id].ts
 import { type NextApiRequest, type NextApiResponse } from "next";
-import { appRouter } from "../../../server/api/root";
+import { appRouter, createCaller } from "../../../server/api/root";
 import { createTRPCContext } from "../../../server/api/trpc";
 
 const userByIdHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   // Create context and caller
   const ctx = await createTRPCContext({ req, res });
-  const caller = appRouter.createCaller(ctx);
+  const caller = createCaller(ctx);
   try {
     const { id } = req.query;
     const user = await caller.user.getById(id);
     res.status(200).json(user);
   } catch (cause) {
     if (cause instanceof TRPCError) {
-      // An error from tRPC occured
+      // An error from tRPC occurred
       const httpCode = getHTTPStatusCodeFromError(cause);
       return res.status(httpCode).json(cause);
     }
-    // Another error occured
+    // Another error occurred
     console.error(cause);
     res.status(500).json({ message: "Internal server error" });
   }
@@ -304,7 +304,7 @@ Optimistic updates are when we update the UI before the API call has finished. T
 const MyComponent = () => {
   const listPostQuery = api.post.list.useQuery();
 
-  const utils = api.useContext();
+  const utils = api.useUtils();
   const postCreate = api.post.create.useMutation({
     async onMutate(newPost) {
       // Cancel outgoing fetches (so they don't overwrite our optimistic update)

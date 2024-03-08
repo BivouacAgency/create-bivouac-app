@@ -11,9 +11,15 @@ export const logNextSteps = async ({
   appRouter,
   noInstall,
   projectDir,
+  databaseProvider,
 }: Pick<
   InstallerOptions,
-  "projectName" | "packages" | "noInstall" | "projectDir" | "appRouter"
+  | "projectName"
+  | "packages"
+  | "noInstall"
+  | "projectDir"
+  | "appRouter"
+  | "databaseProvider"
 >) => {
   const pkgManager = getUserPkgManager();
 
@@ -26,6 +32,10 @@ export const logNextSteps = async ({
     } else {
       logger.info(`  ${pkgManager} install`);
     }
+  }
+
+  if (["postgres", "mysql"].includes(databaseProvider)) {
+    logger.info("  ./start-database.sh");
   }
 
   if (packages?.prisma.inUse || packages?.drizzle.inUse) {
@@ -55,7 +65,12 @@ export const logNextSteps = async ({
 
   if (packages?.drizzle.inUse) {
     logger.warn(
-      `\nThank you for trying out the new Drizzle option. If you encounter any issues, please open an issue!`,
+      `\nThank you for trying out the new Drizzle option. If you encounter any issues, please open an issue!`
+    );
+  }
+
+  if (databaseProvider === "planetscale") {
+    logger.warn(
       `\nNote: We use the PlanetScale driver so that you can query your data in edge runtimes. If you want to use a different driver, you'll need to change it yourself.`
     );
   }
